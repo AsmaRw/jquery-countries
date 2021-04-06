@@ -1,7 +1,14 @@
+$(document).ready(function () {
+    $('#btnShowCountries').click(function () {
+        function getCountries() {
 
-$.ajax({
-    url: 'http://localhost:8000/countries',
-    success: function getCountries  (data, statuts, response) {
-        console.log(data[0]);
+            $.ajax({
+                url: 'http://localhost:8000/countries',
+                success: function (data, statuts, response) {
+                    console.log(data);
+                }
+        })
     }
-});
+    })
+})
+
